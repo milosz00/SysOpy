@@ -1,0 +1,9 @@
+WARIANT 1
+real time: 5
+sys time: 0
+user time: 0
+
+WARIANT 2
+real time: 139
+sys time: 13
+user time: 8
