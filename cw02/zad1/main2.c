@@ -31,14 +31,14 @@ int rowCounting(node** tail, char* content) {
         rowEnd = i;
 
         int rowLength = rowEnd - rowStart + 1;
-        char* row = calloc(sizeof(char), rowLength + 1);
+        char* row = malloc((rowLength + 1) * sizeof(char));
 
         for(int i = rowStart, j = 0; i < rowEnd; ++i, ++j)
             row[j] = content[i];
 
         i++;
 
-        *tail = calloc(sizeof(struct node), 1); 
+        *tail = malloc(sizeof(struct node)); 
         (*tail)->value = row; 
         tail = &(*tail)->next;
         
@@ -91,7 +91,9 @@ void printTwoFiles(char* filename1, char* filename2) {
     rows2 = rowCounting(tailSecond,content2);
     rowsCount += rows2;
 
-    
+    free(content1);
+    free(content2);
+
     struct node* iter1 = rowList1, *tmp;
     struct node* iter2 = rowList2;
 
@@ -147,8 +149,8 @@ int main(int argc, char** argv) {
     }
     clock_start = times(&tms_start);
 
-    char* filename1 = calloc(1024, sizeof(char));
-    char* filename2 = calloc(1024, sizeof(char));
+    char* filename1 = malloc(1024 * sizeof(char));
+    char* filename2 = malloc(1024 * sizeof(char));
 
     if(argc < 3) {
         scanf("%s", filename1);

@@ -4,6 +4,6 @@ sys time: 0
 user time: 0
 
 WARIANT 2
-real time: 516
-sys time: 70
-user time: 15
+real time: 527
+sys time: 63
+user time: 24

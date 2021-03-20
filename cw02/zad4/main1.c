@@ -32,7 +32,7 @@ void changeSentencesInFile(FILE *fileRead, FILE *fileSave, char* sentenceToChang
         rowEnd = i;
 
         int rowLength = rowEnd - rowStart + 1;
-        char* row = calloc(sizeof(char), rowLength + 1);
+        char* row = malloc((rowLength + 1) * sizeof(char));
 
         for(int i = rowStart, j = 0; i < rowEnd; ++i, ++j)
             row[j] = content[i];
@@ -63,14 +63,14 @@ int main(int argc, char** argv) {
         exit(1);
     }
 
-    char* filenameRead = calloc(1024, sizeof(char));
-    char* filenameSave = calloc(1024, sizeof(char));
+    char* filenameRead = malloc((strlen(argv[1]) + 1) * sizeof(char));
+    char* filenameSave = malloc((strlen(argv[2]) + 1) * sizeof(char));
 
     filenameRead = argv[1];
     filenameSave = argv[2];
 
-    char* sentenceToChange = calloc(1024, sizeof(char));
-    char* sentenceToWrite = calloc(1024, sizeof(char));
+    char* sentenceToChange = malloc((strlen(argv[3]) + 1) * sizeof(char));
+    char* sentenceToWrite = malloc((strlen(argv[4]) + 1) * sizeof(char));
 
     sentenceToChange = argv[3];
     sentenceToWrite = argv[4];
@@ -85,6 +85,7 @@ int main(int argc, char** argv) {
     }
 
     changeSentencesInFile(file1, file2, sentenceToChange, sentenceToWrite);
+
 
     fclose(file1);
     fclose(file2);

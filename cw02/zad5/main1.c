@@ -27,7 +27,7 @@ void writeFiftyLetterSentence(FILE* file, char* content, int fSize) {
 
 
         int rowLength = rowEnd - rowStart + 1;
-        char* row = calloc(sizeof(char), rowLength + 1);
+        char* row = malloc((rowLength + 1) * sizeof(char));
 
         for(int i = rowStart, j = 0; i < rowEnd; ++i, ++j)
             row[j] = content[i];

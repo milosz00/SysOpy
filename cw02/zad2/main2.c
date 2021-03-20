@@ -32,7 +32,7 @@ int rowCounting(node** tail, char* content, char letter) {
         rowEnd = i;
 
         int rowLength = rowEnd - rowStart + 1;
-        char* row = calloc(sizeof(char), rowLength + 1);
+        char* row = malloc((rowLength + 1) * sizeof(char));
 
         for(int i = rowStart, j = 0; i < rowEnd; ++i, ++j)
             row[j] = content[i];
@@ -41,7 +41,7 @@ int rowCounting(node** tail, char* content, char letter) {
 
         if(strchr(row,letter)) {
 
-            *tail = calloc(sizeof(struct node), 1); 
+            *tail = malloc(sizeof(struct node)); 
             (*tail)->value = row; 
             tail = &(*tail)->next;
             
@@ -107,11 +107,13 @@ int main(int argc, char** argv) {
         exit(1);
     }
 
-    char* filename = calloc(1024,sizeof(char));
+    char* filename = malloc((strlen(argv[2]) + 1) * sizeof(char));
     filename = argv[2];
     char letter = argv[1][0];
 
     printRowsWithSpecificLetter(filename, letter);
+    
+
 
     clock_end = times(&tms_end);
     write(raport, "\nWARIANT 2\n",11);
