@@ -1,0 +1,146 @@
+    SHARED  LIBRARY TEST 
+----------------
+*** test1 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.010000
+sys time: 0.000000
+user time: 0.000000
+
+*** test2 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.010000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+
+*** test3 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.030000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+
+*** test4 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.020000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+MERGE FILES OPERATION
+--------------------
+real time: 0.010000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+MERGE FILES OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+
+w przypadku wykorzystanie bibliotek współdzielonych w teście 3 czas na scalenie plików jest dłuższy niż w przypadku bibliotek statycznych

@@ -1,0 +1,145 @@
+    DYNAMIC  LIBRARY TEST 
+----------------
+*** test1 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.110000
+sys time: 0.000000
+user time: 0.080000
+
+*** test2 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.010000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+
+*** test3 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.030000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+
+*** test4 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.030000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+MERGE FILES OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+MERGE FILES OPERATION
+--------------------
+real time: 0.010000
+sys time: 0.000000
+user time: 0.000000
+

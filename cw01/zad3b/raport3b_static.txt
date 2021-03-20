@@ -1,0 +1,456 @@
+--------- opt = O0 ---------
+
+    STATIC  LIBRARY TEST 
+----------------
+*** test1 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.480000
+sys time: 0.000000
+user time: 0.000000
+
+*** test2 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.010000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+
+*** test3 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.030000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+
+*** test4 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.030000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+MERGE FILES OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+MERGE FILES OPERATION
+--------------------
+real time: 0.010000
+sys time: 0.000000
+user time: 0.000000
+
+
+
+
+####################################
+
+
+
+--------- opt = O2 ---------
+
+    STATIC  LIBRARY TEST 
+----------------
+*** test1 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.010000
+sys time: 0.000000
+user time: 0.000000
+
+*** test2 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.010000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+
+*** test3 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.020000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+
+*** test4 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.030000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+MERGE FILES OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+MERGE FILES OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+
+
+
+########################################
+
+
+--------- opt = Os ---------
+
+    STATIC  LIBRARY TEST 
+----------------
+*** test1 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.010000
+sys time: 0.000000
+user time: 0.000000
+
+*** test2 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.010000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+
+*** test3 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.020000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+
+*** test4 ***
+MERGE FILES OPERATION
+--------------------
+real time: 0.020000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+MERGE FILES OPERATION
+--------------------
+real time: 0.010000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE ROW OPEARTION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+REMOVE BLOCK OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+MERGE FILES OPERATION
+--------------------
+real time: 0.000000
+sys time: 0.000000
+user time: 0.000000
+
+
+
+W teście 4 można zauważyć, że czas scalania plików jest krótszy dla optymalizacji -Os niż dla dwóch pozostałych
