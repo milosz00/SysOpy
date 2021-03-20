@@ -36,6 +36,8 @@ int rowCounting(node** tail, char* content) {
 
         i++;
 
+
+        // put at the end of the list
         *tail = malloc(sizeof(struct node)); 
         (*tail)->value = row; 
         tail = &(*tail)->next;
@@ -114,6 +116,8 @@ void printTwoFiles(char* filename1, char* filename2) {
             }
     }
 
+
+    // if file1 is longer we must print other rows from this file
     while(r1 < rows1) {
         printf("%s\n", iter1->value);
         tmp = iter1;
@@ -122,6 +126,7 @@ void printTwoFiles(char* filename1, char* filename2) {
         r1++;
     }
 
+    // else we print rows from file2
     while(r2 < rows2) {
         printf("%s\n", iter2->value);
         tmp = iter2;

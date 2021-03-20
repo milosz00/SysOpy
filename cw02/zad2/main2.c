@@ -39,6 +39,7 @@ int rowCounting(node** tail, char* content, char letter) {
 
         i++;
 
+        // if the letter is on that line, we put that line at the end of the list
         if(strchr(row,letter)) {
 
             *tail = malloc(sizeof(struct node)); 
