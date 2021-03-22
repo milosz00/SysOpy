@@ -41,7 +41,7 @@ int checkIsPerfectSquare(int number) {
 
 int main(int argc, char** argv) {
 
-    FILE *raport = fopen("pomiar_zad_3.txt", "w");
+    FILE *raport = fopen("omiar_zad_3.txt", "w");
     if(raport == NULL){
         perror("File open error");
         exit(1);

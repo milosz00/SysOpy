@@ -139,7 +139,7 @@ void printTwoFiles(char* filename1, char* filename2) {
 
 int main(int argc, char** argv) {
 
-    FILE *raport = fopen("pomiar_zad_1.txt", "w");
+    FILE *raport = fopen("omiar_zad_1.txt", "w");
     if(raport == NULL){
         perror("File open error");
         exit(1);

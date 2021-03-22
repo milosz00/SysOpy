@@ -51,7 +51,7 @@ void changeSentencesInFile(FILE *fileRead, FILE *fileSave, char* sentenceToChang
 
 int main(int argc, char** argv) {
 
-    FILE *raport = fopen("pomiar_zad_4.txt", "w");
+    FILE *raport = fopen("omiar_zad_4.txt", "w");
     if(raport == NULL){
         perror("File open error");
         exit(1);

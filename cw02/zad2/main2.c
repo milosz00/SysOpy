@@ -96,7 +96,7 @@ void writeToFile(int file, int number) {
 
 int main(int argc, char** argv) {
 
-    int raport = open("pomiar_zad_2.txt", O_WRONLY | O_APPEND);
+    int raport = open("omiar_zad_2.txt", O_WRONLY | O_APPEND);
     if(raport == -1){
         perror("File open error");
         exit(1);
