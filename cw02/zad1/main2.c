@@ -70,8 +70,6 @@ void printTwoFiles(char* filename1, char* filename2) {
 
     read(file1, content1, fileSize1);
     read(file2, content2, fileSize2);
-    content1[fileSize1] = 0;
-    content2[fileSize2] = 0;
     close(file1);
     close(file2);
 

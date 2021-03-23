@@ -71,8 +71,6 @@ void printTwoFiles(char* filename1, char* filename2) {
 
     fread(content1, 1, fileSize1, file1);
     fread(content2, 1, fileSize2, file2);
-    content1[fileSize1] = 0;
-    content2[fileSize2] = 0;
     fclose(file1);
     fclose(file2);
 

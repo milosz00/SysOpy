@@ -65,7 +65,6 @@ void printRowsWithSpecificLetter(char* filename, char letter) {
     char* content = malloc(fSize + 1);
 
     fread(content, 1, fSize, file);
-    content[fSize] = 0;
     fclose(file);
 
 

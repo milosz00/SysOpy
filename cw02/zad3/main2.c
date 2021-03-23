@@ -24,7 +24,6 @@ int rowCounting(int file) {
     char* content = malloc((fSize+1)*sizeof(char));
 
     read(file,content,fSize);
-    content[fSize] = 0;
 
     int count = 0;
     for (int i = 0; i < fSize; i++) {
@@ -64,7 +63,6 @@ void fillArray(int file, int array[], int n) {
     char* content = malloc((fSize+1)*sizeof(char));
 
     read(file,content,fSize);
-    content[fSize] = 0;
     
     int rowStart,rowEnd, j = 0;
     for(int i = 0; content[i]; i++) {

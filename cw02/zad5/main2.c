@@ -87,7 +87,6 @@ int main(int argc, char** argv) {
 
 
     read(file1,content,fSize);
-    content[fSize] = 0;
     
     writeFiftyLetterSentence(file2,content,fSize);
     close(file1);

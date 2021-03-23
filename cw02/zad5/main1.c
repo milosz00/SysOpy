@@ -77,7 +77,6 @@ int main(int argc, char** argv) {
 
 
     fread(content,1,fSize,file1);
-    content[fSize] = 0;
     
     writeFiftyLetterSentence(file2,content,fSize);
     
