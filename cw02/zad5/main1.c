@@ -38,6 +38,8 @@ void writeFiftyLetterSentence(FILE* file, char* content, int fSize) {
 
         if(strlen(row) != 50)
             i++;
+
+        free(row);
     }
 
 }

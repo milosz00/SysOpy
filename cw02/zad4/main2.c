@@ -48,6 +48,7 @@ void changeSentencesInFile(int fileRead, int fileSave, char* sentenceToChange, c
             write(fileSave,buf,2);
             i = rowStart + 1;
         }
+        free(row);
     }
 }
 

@@ -45,6 +45,7 @@ void changeSentencesInFile(FILE *fileRead, FILE *fileSave, char* sentenceToChang
             fprintf(fileSave,"%c",content[rowStart]);
             i = rowStart + 1;
         }
+        free(row);
     }
 }
 
