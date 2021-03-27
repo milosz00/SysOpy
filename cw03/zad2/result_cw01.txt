@@ -1,0 +1,33 @@
+MERGE FILES OPERATION
+--------------------
+real time: 715
+sys time: 40
+user time: 509
+
+
+MERGE FILES OPERATION
+--------------------
+real time: 14
+sys time: 0
+user time: 2
+
+
+MERGE FILES OPERATION
+--------------------
+real time: 258
+sys time: 25
+user time: 137
+
+
+MERGE FILES OPERATION
+--------------------
+real time: 12
+sys time: 2
+user time: 5
+
+
+MERGE FILES OPERATION
+--------------------
+real time: 866
+sys time: 88
+user time: 432
