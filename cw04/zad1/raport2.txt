@@ -1,0 +1,17 @@
+Po utworzeniu funkcją fork() nowego procesu ustawienia sygnałów:
+ - ignore
+ - handler
+ - mask
+zostały odziedziczone, natomiast ustawienia sygnałów:
+ - pending
+nie jest widoczny w procesie potomnym
+
+---------------------------------------------------------------
+
+Po wykonaniu funkcji execl() ustawienia sygnałów:
+ - ignore
+ - mask
+ - pending
+zostały odziedziczone, natomiast ustawienia sygnałów:
+ - handler
+nie jest widoczny w procesie potomnym
