@@ -1,0 +1,5 @@
+SA_RESTART
+    Dostarcza zachowania kompatybilnego z semantyką sygnałową  BSD,  czyniąc  pewne
+    wywołania  systemowe odtwarzalnymi przez sygnały. Flaga ta ma znaczenie podczas
+    ustanawiania procedury obsługi sygnału. Informacje na temat odtwarzania wywołań
+    systemowych można znaleźć w podręczniku signal(7).
