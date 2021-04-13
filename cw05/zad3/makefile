@@ -1,36 +1,33 @@
-CC = gcc
-CFLAGS = -Wall -Wextra -pedantic -Werror -std=c11 -g
+cc = gcc -Wall -Wextra -pedantic -Werror -std=c11 -g
 
-src = $(wildcard *.c)
-obj = $(src:.c=.o)
 
-.PHONY: all
 all: run
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+consumer:
+		$(cc) consumer.c -o consumer
 
-consumer: consumer.o
-	$(CC) $(CFLAGS) $^ -o $@
+producer:
+		$(cc) producer.c -o producer
 
-producer: producer.o
-	$(CC) $(CFLAGS) $^ -o $@
+main:
+		$(cc) main.c -o main
 
-main: main.o
-	$(CC) $(CFLAGS) $^ -o $@
+prepare_inputs:
+		echo -n "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH" > first.txt
+		echo -n "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS" > second.txt
+		echo -n "9999999999999999999999999999999999999999999999999999999999999999999999" > third.txt
+		echo -n "######################################################################" > fourth.txt
+		echo -n "**********************************************************************" > fifth.txt
 
-.PHONY: clean
+
+compile:
+		make -s producer
+		make -s consumer
+		make -s main
+		make -s prepare_inputs
+
 clean:
-	rm -f $(obj) consumer producer main *.txt pipe
+		rm -f consumer producer main *.txt pipe 
 
-.PHONY: setup_input
-setup_input:
-	echo -n "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" > A.txt
-	echo -n "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB" > B.txt
-	echo -n "1111111111111111111111111111111111111111111111111111111111111111111111" > 1.txt
-	echo -n "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" > p.txt
-	echo -n "......................................................................" > d.txt
-
-.PHONY: run
-run: producer consumer main setup_input
-	./main
+run: compile
+		./main

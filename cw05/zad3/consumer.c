@@ -19,50 +19,30 @@ int fileSize(FILE *file) {
 
 int main(int argc, char *argv[]) {
     if (argc != 4) {
-        fprintf(stderr, "Usage: ./consumer pipe file N\n");
-        return 1;
+        fprintf(stderr, "Consumer arguments numbr invalid!\n");
+        exit(1);
     }
 
     FILE *pipe = fopen(argv[1], "r");
     FILE *file = fopen(argv[2], "w+");
     const int N = atoi(argv[3]);
 
-    // int fSize = fileSize(pipe);
-    // char* content = malloc(fSize+1);
-    // fread(content, 1, fSize, pipe);
-    // printf("%s\n", content);
-
-
     char array[MAX_PRODUCER][MAX_LINE_LEN] = {0};
-    char tmp[2000] = "";
+    char tmp[MAX_PRODUCER * MAX_LINE_LEN] = "";
     char *buffer = calloc(N + 3, sizeof(char));
     while (fread(buffer, 1, N+2, pipe) > 0) {
-        // fwrite(buffer, 1, N, file);
-        // printf("%s", buffer);
         strcat(tmp, buffer);
-        // char row[2];
-        // sscanf(buffer, "%1s", row);
-        // int row_= atoi(row);
-        // printf("ROW = %d\n", row_);
-        // char* tmp = strdup(buffer);
-        // printf("%s", tmp);
-        // // int row = atoi(buffer[0]);
-        // // char* tmp = buffer + 2;
-        // // printf("BUM = %d|%s\n", row, tmp);
-        // // strcat(array[row], tmp);
-        // free(tmp);
     }
 
-    char korektor[] = "|\n";
+    char corrector[] = "|\n";
     char* buf;
-    buf = strtok(tmp, korektor);
+    buf = strtok(tmp, corrector);
     int max_row = 0;
     while(buf != NULL) {
       int row = atoi(buf);
-      buf = strtok(NULL, korektor);
-      // printf("%d|%s\n", row, buf);
+      buf = strtok(NULL, corrector);
       strcat(array[row], buf);
-      buf = strtok(NULL, korektor);
+      buf = strtok(NULL, corrector);
 
       if(row > max_row)
         max_row = row;
@@ -74,7 +54,6 @@ int main(int argc, char *argv[]) {
 
 
     free(buffer);
-    // free(content);
     fclose(file);
     fclose(pipe);
 }
