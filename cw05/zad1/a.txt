@@ -1,0 +1,5 @@
+cat makefile | grep main | wc -l
+cat main.c | grep fork | wc -l
+ls -al | grep main
+cat main.c | grep fork | wc -l
+ls -al | grep main
