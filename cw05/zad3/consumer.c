@@ -9,14 +9,6 @@
 #define MAX_PRODUCER 10
 #define MAX_LINE_LEN 200
 
-int fileSize(FILE *file) {
-    fseek(file,0,SEEK_END);
-    long size = ftell(file);
-    fseek(file,0,SEEK_SET);
-
-    return size;
-}
-
 int main(int argc, char *argv[]) {
     if (argc != 4) {
         fprintf(stderr, "Consumer arguments numbr invalid!\n");
