@@ -4,7 +4,6 @@
 #include <sys/ipc.h>
 #include <sys/stat.h>
 #include <errno.h>
-#include <stdbool.h>
 #include <string.h>
 #include <signal.h>
 #include <mqueue.h>
@@ -18,11 +17,6 @@ mqd_t queue_desc;
 mqd_t server_queue_desc;
 int client_id;
 
-void error_exit(char* msg) {
-    printf("Error: %s\n", msg);
-    printf("Errno: %d\n", errno);
-    exit(EXIT_FAILURE);
-}
 
 void stop_command() {
     char* msg = (char*)calloc(MAX_MSG_LEN, sizeof(char));
@@ -44,21 +38,21 @@ void chat_mode(int other_id, mqd_t other_queue_desc) {
     size_t len = 0;
     ssize_t read = 0;
     char* msg = (char*)calloc(MAX_MSG_LEN, sizeof(char));
-    while(true) {
+    while(1) {
         printf("Enter message or DISCONNECT: ");
         read = getline(&cmd, &len, stdin);
         cmd[read - 1] = '\0';
 
         struct timespec* tspec = (struct timespec*)malloc(sizeof(struct timespec));
         unsigned int type;
-        bool disconnect = false;
+        int disconnect = 0;
         while(mq_timedreceive(queue_desc, msg, MAX_MSG_LEN, &type, tspec) >= 0) {
             if(type == STOP) {
                 printf("STOP from server, quitting...\n");
                 stop_command();
             } else if(type == DISCONNECT) {
                 printf("Disconnecting...\n");
-                disconnect = true;
+                disconnect = 1;
                 break;
             } else {
                 printf("[%d]: %s\n", other_id, msg);
@@ -80,7 +74,7 @@ void chat_mode(int other_id, mqd_t other_queue_desc) {
 }
 
 
-int init_connection() {
+int init() {
     char* msg = (char*)calloc(MAX_MSG_LEN, sizeof(char));
     strcpy(msg, queue_name);
 
@@ -115,9 +109,9 @@ void connect_command(int id) {
 
     char* other_queue_name = (char*)calloc(NAME_LEN, sizeof(char));
     strncpy(other_queue_name, msg + 1, strlen(msg) - 1);
-    printf("other name %s\n", other_queue_name);
+    printf("------------------\n");
     mqd_t other_queue_desc = mq_open(other_queue_name, O_RDWR);
-    if(other_queue_desc < 0) error_exit("cannot access other client queue");
+
 
     chat_mode(id, other_queue_desc);
 }
@@ -139,22 +133,17 @@ void check_server_message() {
             strncpy(other_queue_name, msg + 1, strlen(msg) - 1);
             printf("other name %s\n", other_queue_name);
             mqd_t other_queue_desc = mq_open(other_queue_name, O_RDWR);
-            if(other_queue_desc < 0) error_exit("cannot access other client queue");
 
             chat_mode((int) msg[0] - 1, other_queue_desc);
         }
     }
 }
 
-char random_char() {
-    return rand() % ('Z' - 'A' + 1) + 'A';
-}
 
 void generate_name() {
     queue_name[0] = '/';
     for(int i = 1; i < NAME_LEN; i++) queue_name[i] = random_char();
 }
-
 
 int main(int argc, char** argv) {
     srand(time(NULL));
@@ -162,16 +151,14 @@ int main(int argc, char** argv) {
     printf("Queue name %s\n", queue_name);
 
     queue_desc = create_queue(queue_name);
-    if(queue_desc < 0) error_exit("cannot create queue");
 
     server_queue_desc = mq_open(SERVER_QUEUE_NAME, O_RDWR, 0666, NULL);
-    if(server_queue_desc < 0) error_exit("cannot access server queue");
 
-    client_id = init_connection();
+    client_id = init();
 
     signal(SIGINT, quit);
 
-    while(true) {
+    while(1) {
         printf("Enter command: ");
         char* cmd = NULL;
         size_t len = 0;

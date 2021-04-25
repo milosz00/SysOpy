@@ -19,6 +19,18 @@ mqd_t create_queue(const char* name) {
     return mq_open(name, O_RDWR | O_CREAT, 0666, &attr);
 }
 
+char random_char() {
+    return rand() % ('Z' - 'A' + 1) + 'A';
+}
+
+
+void error_exit(char* msg) {
+    printf("Error: %s\n", msg);
+    printf("Errno: %d\n", errno);
+    exit(EXIT_FAILURE);
+}
+
+
 const char* SERVER_QUEUE_NAME = "/SERVER";
 
 #endif //CONFIG_H

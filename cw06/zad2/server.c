@@ -4,7 +4,6 @@
 #include <sys/ipc.h>
 #include <sys/stat.h>
 #include <errno.h>
-#include <stdbool.h>
 #include <string.h>
 #include <signal.h>
 #include <mqueue.h>
@@ -17,12 +16,6 @@ int first_free_id = 0;
 
 mqd_t server_queue;
 
-
-void error_exit(char* msg) {
-    printf("Error: %s\n", msg);
-    printf("Errno: %d\n", errno);
-    exit(EXIT_FAILURE);
-}
 
 void quit(int signum) {
     char* msg_res = (char*)calloc(MAX_MSG_LEN, sizeof(char));
@@ -47,7 +40,6 @@ void init_handler(char* msg, char* msg_res) {
     int id = first_free_id++;
 
     mqd_t client_queue_desc = mq_open(msg, O_RDWR);
-    if(client_queue_desc < 0) error_exit("cannot access client queue");
 
     clients_available[id] = 1;
     clients_queues[id] = (char*)calloc(NAME_LEN, sizeof(char));
@@ -80,14 +72,12 @@ void connect_handler(char* msg, char* msg_res) {
     int other_client_id = (int) msg[1];
 
     mqd_t client_queue_desc = mq_open(clients_queues[client_id], O_RDWR);
-    if(client_queue_desc < 0) error_exit("cannot access client queue");
     msg_res[0] = (char) (other_client_id + 1);
     strcat(msg_res, clients_queues[other_client_id]);
     if(mq_send(client_queue_desc, msg_res, MAX_MSG_LEN, CONNECT) < 0) error_exit("cannot send message");
 
     memset(msg_res, 0, strlen(msg_res));
     client_queue_desc = mq_open(clients_queues[other_client_id], O_RDWR);
-    if(client_queue_desc < 0) error_exit("cannot access client queue");
     msg_res[0] = (char) (client_id + 1);
     strcat(msg_res, clients_queues[client_id]);
     if(mq_send(client_queue_desc, msg_res, MAX_MSG_LEN, CONNECT) < 0) error_exit("cannot send message");
@@ -123,7 +113,6 @@ int main() {
     for(int i = 0; i < MAX_CLIENTS; i++) { clients_queues[i] = NULL; }
 
     server_queue = create_queue(SERVER_QUEUE_NAME);
-    if(server_queue < 0) error_exit("cannot create queue");
 
     signal(SIGINT, quit);
     char* msg = (char*)calloc(MAX_MSG_LEN, sizeof(char));
