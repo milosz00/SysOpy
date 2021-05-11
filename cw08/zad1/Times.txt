@@ -1,0 +1,131 @@
+------   MODE: block   ------
+
+        THREAD NO. 0 lasted 221 microseconds
+
+        TOTAL TIME: 483 microseconds
+
+
+./main 2 block input.ascii.pgm result
+------   MODE: block   ------
+
+        THREAD NO. 0 lasted 129 microseconds
+        THREAD NO. 1 lasted 109 microseconds
+
+        TOTAL TIME: 391 microseconds
+
+
+./main 4 block input.ascii.pgm result
+------   MODE: block   ------
+
+        THREAD NO. 0 lasted 85 microseconds
+        THREAD NO. 1 lasted 62 microseconds
+        THREAD NO. 2 lasted 61 microseconds
+        THREAD NO. 3 lasted 76 microseconds
+
+        TOTAL TIME: 420 microseconds
+
+
+./main 8 block input.ascii.pgm result
+------   MODE: block   ------
+
+        THREAD NO. 0 lasted 60 microseconds
+        THREAD NO. 1 lasted 38 microseconds
+        THREAD NO. 2 lasted 39 microseconds
+        THREAD NO. 3 lasted 52 microseconds
+        THREAD NO. 4 lasted 32 microseconds
+        THREAD NO. 5 lasted 31 microseconds
+        THREAD NO. 6 lasted 31 microseconds
+        THREAD NO. 7 lasted 26 microseconds
+
+        TOTAL TIME: 571 microseconds
+
+
+./main 16 block input.ascii.pgm result
+------   MODE: block   ------
+
+        THREAD NO. 0 lasted 77 microseconds
+        THREAD NO. 1 lasted 53 microseconds
+        THREAD NO. 2 lasted 28 microseconds
+        THREAD NO. 3 lasted 32 microseconds
+        THREAD NO. 4 lasted 18 microseconds
+        THREAD NO. 5 lasted 18 microseconds
+        THREAD NO. 6 lasted 16 microseconds
+        THREAD NO. 7 lasted 16 microseconds
+        THREAD NO. 8 lasted 27 microseconds
+        THREAD NO. 9 lasted 16 microseconds
+        THREAD NO. 10 lasted 16 microseconds
+        THREAD NO. 11 lasted 16 microseconds
+        THREAD NO. 12 lasted 16 microseconds
+        THREAD NO. 13 lasted 16 microseconds
+        THREAD NO. 14 lasted 16 microseconds
+        THREAD NO. 15 lasted 11 microseconds
+
+        TOTAL TIME: 1119 microseconds
+
+
+#######################################################
+
+
+------   MODE: numbers   ------
+
+        THREAD NO. 0 lasted 382 microseconds
+
+        TOTAL TIME: 648 microseconds
+
+
+./main 2 numbers input.ascii.pgm result
+------   MODE: numbers   ------
+
+        THREAD NO. 0 lasted 310 microseconds
+        THREAD NO. 1 lasted 300 microseconds
+
+        TOTAL TIME: 576 microseconds
+
+
+./main 4 numbers input.ascii.pgm result
+------   MODE: numbers   ------
+
+        THREAD NO. 0 lasted 298 microseconds
+        THREAD NO. 1 lasted 306 microseconds
+        THREAD NO. 2 lasted 574 microseconds
+        THREAD NO. 3 lasted 585 microseconds
+
+        TOTAL TIME: 962 microseconds
+
+
+./main 8 numbers input.ascii.pgm result
+------   MODE: numbers   ------
+
+        THREAD NO. 0 lasted 383 microseconds
+        THREAD NO. 1 lasted 470 microseconds
+        THREAD NO. 2 lasted 443 microseconds
+        THREAD NO. 3 lasted 590 microseconds
+        THREAD NO. 4 lasted 520 microseconds
+        THREAD NO. 5 lasted 467 microseconds
+        THREAD NO. 6 lasted 897 microseconds
+        THREAD NO. 7 lasted 594 microseconds
+
+        TOTAL TIME: 1556 microseconds
+
+
+./main 16 numbers input.ascii.pgm result
+------   MODE: numbers   ------
+
+        THREAD NO. 0 lasted 371 microseconds
+        THREAD NO. 1 lasted 413 microseconds
+        THREAD NO. 2 lasted 438 microseconds
+        THREAD NO. 3 lasted 536 microseconds
+        THREAD NO. 4 lasted 507 microseconds
+        THREAD NO. 5 lasted 593 microseconds
+        THREAD NO. 6 lasted 560 microseconds
+        THREAD NO. 7 lasted 538 microseconds
+        THREAD NO. 8 lasted 1208 microseconds
+        THREAD NO. 9 lasted 606 microseconds
+        THREAD NO. 10 lasted 607 microseconds
+        THREAD NO. 11 lasted 610 microseconds
+        THREAD NO. 12 lasted 603 microseconds
+        THREAD NO. 13 lasted 500 microseconds
+        THREAD NO. 14 lasted 507 microseconds
+        THREAD NO. 15 lasted 526 microseconds
+
+        TOTAL TIME: 2193 microseconds
