@@ -37,21 +37,19 @@ void santa() {
         santa_sleeping = 0;
 
 		if (reindeers_ready == REINDEER_NUMBER) {
-			printf("Mikolaj: dostarczam zabawki\n");
+            printf("Mikolaj: dostarczam zabawki\n");
             if(elves_help < 3)
-			    printf("Mikolaj: Zasypiam\n");
+                printf("Mikolaj: Zasypiam\n");
             reindeers_ready = 0;
             send_presents++;
             sleep(4);
-		}
-		else if (elves_help == 3)
-		{
+		} else if (elves_help == 3) {
             help_elves();
             elves_help = 0;
             printf("Mikolaj: Zasypiam\n");
             sleep(2);
 		}
-		pthread_mutex_unlock(&mutex);
+        pthread_mutex_unlock(&mutex);
 	}
 }
 
